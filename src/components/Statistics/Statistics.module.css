@@ -1,0 +1,31 @@
+.statistics {
+    background-color: azure;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .title {
+    font-size: 24px;
+  }
+  .statList {
+    display: flex;
+    width: 350px;
+    background-color: white;
+    padding: 0;
+  }
+  .item {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    align-items: center;
+    border: 1px solid lightgray;
+    width: 70px;
+    height: 50px;
+  }
+  .label {
+    font-size: 16px;
+  }
+  .percentage {
+    font-size: 22px;
+  }

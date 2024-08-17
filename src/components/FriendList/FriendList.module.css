@@ -1,0 +1,33 @@
+.friendList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0;
+  }
+  .item {
+    display: flex;
+  
+    gap: 65px;
+    /* margin: 15px auto; */
+    width: 400px;
+    height: 100%;
+    border: 2px solid lightgrey;
+    border-radius: 3px;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+  }
+  .item :hover {
+    background-color: aliceblue;
+  }
+  .statusTrue {
+    border: 10px solid green;
+    border-radius: 50%;
+  }
+  .statusFalse {
+    border: 10px solid red;
+    border-radius: 50%;
+  }
+  .name {
+    font-size: 28px;
+  }
