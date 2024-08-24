@@ -1,35 +1,29 @@
 import css from './Profile.module.css';
 
-const Profile = ({
-  username,
-  tag,
-  location,
-  avatar,
-  stats: { followers, views, likes },
-}) => (
-  <div className={css.profile} key={username}>
-    <div className={css.description}>
-      <img src={avatar} alt={username} className={css.avatar} />
-      <p className={css.name}>{username}</p>
-      <p className={css.tag}>{tag}</p>
-      <p className={css.location}>{location}</p>
+export default function Profile({ name, tag, location, image, stats }) {
+  return (
+    <div className={css.profile}>
+      <div>
+        <img className={css.avatar} src={image} alt="User avatar" />
+        <p className={css.name}>{name}</p>
+        <p className={css.info}>@{tag}</p>
+        <p className={css.info}>{location}</p>
+      </div>
 
-      <ul className={css.stats}>
-        <li className={css.statsItem}>
-          <span className={css.label}>Followers</span>
-          <span className={css.quantity}>{followers}</span>
+      <ul className={css.list}>
+        <li className={css.listItem}>
+          <span>Followers</span>
+          <span className={css.accent}>{stats.followers}</span>
         </li>
-        <li className={css.statsItem}>
-          <span className={css.label}>Views</span>
-          <span className={css.quantity}>{views}</span>
+        <li className={css.listItem}>
+          <span>Views</span>
+          <span className={css.accent}>{stats.views}</span>
         </li>
-        <li className={css.statsItem}>
-          <span className={css.label}>Likes</span>
-          <span className={css.quantity}>{likes}</span>
+        <li className={css.listItem}>
+          <span>Likes</span>
+          <span className={css.accent}>{stats.likes}</span>
         </li>
       </ul>
     </div>
-  </div>
-);
-
-export default Profile;
+  );
+}

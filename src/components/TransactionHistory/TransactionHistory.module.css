@@ -1,34 +1,42 @@
-.transactionHistory {
-    border: 2px solid grey;
-    border-radius: 2px;
-    /* background-color: azure; */
+.table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  margin: 20px auto;
+}
+
+th,
+td {
+  border: 1px solid #000000;
+  width: calc(100% / 3);
+  padding: 5px;
+}
+
+.tableHeader {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.tableRow {
+  color: #212121;
+}
+
+.tableRow:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.tableRow:nth-child(even) {
+  background-color: #cccccc;
+}
+
+.transactionType {
+  text-transform: capitalize;
+  text-align: left;
+  padding-left: 40px;
+}
+
+@media only screen and (min-width: 450px) {
+  .table {
+    width: 450px;
   }
-  .tableTitle {
-    color: aliceblue;
-    font-size: 22px;
-    background-color: rgba(92, 174, 209, 0.772);
-  }
-  .tablElement1 {
-    width: 200px;
-    height: 50px;
-    border: 1px solid lightgrey;
-    font-size: 18px;
-  }
-  .tablElement2 {
-    width: 100px;
-    height: 50px;
-    border: 1px solid lightgrey;
-    font-size: 18px;
-  }
-  .tablElement3 {
-    width: 100px;
-    height: 50px;
-    border: 1px solid lightgrey;
-    font-size: 18px;
-  }
-  .tableColor1 {
-    background-color: rgba(219, 219, 219, 0.463);
-  }
-  .tableColor2 {
-    background-color: white;
-  }
+}
